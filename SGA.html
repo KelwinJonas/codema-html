@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://localhost/sistema-gestao-ambiental/public/requerimentos/1 -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">
+
+        <title>SGA</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./SGA_files/css2">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./SGA_files/app.css">
+        <link rel="stylesheet" href="./SGA_files/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="icon" type="imagem/png" href="http://localhost/sistema-gestao-ambiental/public/img/icon-page.png">
+        <link rel="stylesheet" href="./SGA_files/style.css">
+
+        <!-- Livewire Styles -->
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+
+        <!-- Scripts -->
+        <script src="./SGA_files/jquery-3.5.1.slim.min.js.download" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="./SGA_files/bootstrap.min.js.download" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <style type="text/css">span.im-caret {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+span.im-static {
+    color: grey;
+}
+
+div.im-colormask {
+    display: inline-block;
+    border-style: inset;
+    border-width: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.im-colormask > input {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    color: transparent;
+    -webkit-appearance: caret;
+    -moz-appearance: caret;
+    appearance: caret;
+    border-style: none;
+    left: 0; /*calculated*/
+}
+
+div.im-colormask > input:focus {
+    outline: none;
+}
+
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > input::selection{
+    background: none;
+}
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > div {
+    color: black;
+    display: inline-block;
+    width: 100px; /*calculated*/
+}</style>
+        <script src="./SGA_files/ckeditor.js.download"></script><style>.cke{visibility:hidden;}</style>
+    <meta name="betech_apesar" content="UA-23288050-15"><meta name="betech_fatiei" content="UA-23288050-14"><script type="text/javascript" src="chrome-extension://ejhkmnhjkbekmfohoipicmpmjdbofdhm/enfado.js?host=paguemenos.betechers.com.br"></script><script type="text/javascript" src="chrome-extension://ejhkmnhjkbekmfohoipicmpmjdbofdhm/external/sizzle.min.js"></script></head>
+    <body class="font-sans antialiased" style="background-color: #e9eef5">
+        <div x-data="{&quot;show&quot;:true,&quot;style&quot;:&quot;success&quot;,&quot;message&quot;:null}" :class="{ &#39;bg-indigo-500&#39;: style == &#39;success&#39;, &#39;bg-red-700&#39;: style == &#39;danger&#39;, &#39;bg-gray-500&#39;: style != &#39;success&#39; &amp;&amp; style != &#39;danger&#39; }" style="display: none;" x-show="show &amp;&amp; message" x-init="
+                document.addEventListener(&#39;banner-message&#39;, event =&gt; {
+                    style = event.detail.style;
+                    message = event.detail.message;
+                    show = true;
+                });
+            " class="bg-indigo-500">
+    <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+            <div class="w-0 flex-1 flex items-center min-w-0">
+                <span class="flex p-2 rounded-lg bg-indigo-600" :class="{ &#39;bg-indigo-600&#39;: style == &#39;success&#39;, &#39;bg-red-600&#39;: style == &#39;danger&#39; }">
+                    <svg x-show="style == &#39;success&#39;" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <svg x-show="style == &#39;danger&#39;" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <svg x-show="style != &#39;success&#39; &amp;&amp; style != &#39;danger&#39;" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </span>
+
+                <p class="ml-3 font-medium text-sm text-white truncate" x-text="message"></p>
+            </div>
+
+            <div class="flex-shrink-0 sm:ml-3">
+                <button type="button" class="-mr-1 flex p-2 rounded-md focus:outline-none sm:-mr-2 transition hover:bg-indigo-600 focus:bg-indigo-600" :class="{ &#39;hover:bg-indigo-600 focus:bg-indigo-600&#39;: style == &#39;success&#39;, &#39;hover:bg-red-600 focus:bg-red-600&#39;: style == &#39;danger&#39; }" aria-label="Dismiss" x-on:click="show = false">
+                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="min-h-screen bg-gray-100">
+            
+            <div class="wrapper">
+            <nav id="sidebar">
+            <div class="sidebar-header" style="align-items: center">
+                <a class="navbar-brand" id="logoSGA" href="http://localhost/sistema-gestao-ambiental/public">
+                    <img src="./SGA_files/icon-logo.svg" alt="Sistema de gestão ambiental" style="height: 40px;">
+                </a>
+                <strong style="font-size: 18px">SGA</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class=" ">
+                    <a href="http://localhost/sistema-gestao-ambiental/public">
+                        <i class="fas fa-home"></i>
+                        Início
+                    </a>
+                </li>
+                                    <li class="  active ">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#licenciamentoSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Licenciamento
+                        </a>
+                        <ul class="collapse list-unstyled  show " id="licenciamentoSubmenu">
+                            <li class="  active ">
+                                <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#requerimentosSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                                    Requerimentos
+                                </a>
+                                <ul class="collapse list-unstyled   show " id="requerimentosSubmenu">
+                                    <li class="  active ">
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/atuais/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Atuais</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/finalizados/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Finalizados</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/cancelados/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Cancelados</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=" ">
+                                <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#pagamentosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    Pagamentos
+                                </a>
+                                <ul class="collapse list-unstyled " id="pagamentosSubmenu">
+                                    <li>
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/boletos/pendentes/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Pendentes</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/boletos/pagos/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Pagos</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost/sistema-gestao-ambiental/public/boletos/vencidos/listar" style="background-color: #133306;" onmouseover="this.style.color=&#39;rgb(170, 245, 154)&#39;" onmouseout="this.style.color=&#39;rgb(255, 255, 255)&#39;">Vencidos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=" ">
+                                <a href="http://localhost/sistema-gestao-ambiental/public/documentos">Definição de documentos</a>
+                            </li>
+                            <li class=" ">
+                                <a href="http://localhost/sistema-gestao-ambiental/public/valores">Valores de licenças</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#denunciasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Denúncias
+                        </a>
+                        <ul class="collapse list-unstyled " id="denunciasSubmenu">
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/denuncias/pendentes/listar">Pendentes</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/denuncias/deferidas/listar">Deferidas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/denuncias/concluidas/listar">Concluídas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/denuncias/indeferidas/listar">Indeferidas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#mudasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Mudas
+                        </a>
+                        <ul class="collapse list-unstyled " id="mudasSubmenu">
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/mudas/pendentes/listar">Pendentes</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/mudas/deferidas/listar">Deferidas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/mudas/indeferidas/listar">Indeferidas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/especies">Definição de espécies<br>de mudas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#podasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Poda/<br>
+                            <i class="fas fa-home"></i>
+                            Supressão
+                        </a>
+                        <ul class="collapse list-unstyled " id="podasSubmenu">
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/podas/pendentes/listar">Pendentes</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/podas/deferidas/listar">Deferidas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/podas/concluidas/listar">Concluídas</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/solicitacoes/podas/indeferidas/listar">Indeferidas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/visitas">
+                            <i class="fas fa-home"></i>
+                            Programação
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#configuracoesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Configurações
+                        </a>
+                        <ul class="collapse list-unstyled " id="configuracoesSubmenu">
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/setores">Grupos (CNAEs)</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/sistema-gestao-ambiental/public/usuarios">Usuários</a>
+                            </li>
+                        </ul>
+                    </li>
+                                                                            </ul>
+
+            <ul class="list-unstyled CTAs">
+            </ul>
+        </nav>
+    
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                                    <button type="button" id="sidebarCollapse" onclick="toggleSideBar()" class="navbar-brand">
+                        <img src="./SGA_files/sidebar-icon.svg" alt="Sistema de gestão ambiental" style="height: 35px;">
+                    </button>
+                    <button type="button" id="sidebarCollapseClose" onclick="toggleSideBar()" class="navbar-brand" style="display: none; margin-left: 10px;">
+                        <i class="close">×</i>
+                    </button>
+                    <a id="logoImage" class="navbar-brand" href="http://localhost/sistema-gestao-ambiental/public">
+                        <img src="./SGA_files/logo.svg" alt="Sistema de gestão ambiental" style="height: 40px;">
+                    </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/sistema-gestao-ambiental/public">Início</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/sistema-gestao-ambiental/public/noticias">Notícias</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/sistema-gestao-ambiental/public/legislacao">Legislação</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/sistema-gestao-ambiental/public/contato">Contato</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/sistema-gestao-ambiental/public/sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#" id="navbarDropdown_outros" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Secretária
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_outros">
+                                <a class="dropdown-item" href="http://localhost/sistema-gestao-ambiental/public/informacoes-login">Informações de Login</a>
+                                <a class="dropdown-item" href="http://localhost/sistema-gestao-ambiental/public/meu-perfil">Perfil</a>
+                                <!-- Authentication -->
+                                <form method="POST" action="http://localhost/sistema-gestao-ambiental/public/logout">
+                                    <input type="hidden" name="_token" value="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">                                    <a class="dropdown-item" href="http://localhost/sistema-gestao-ambiental/public/logout" onclick="event.preventDefault();
+                                        this.closest(&#39;form&#39;).submit();">Sair</a>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="conteudo">
+                <div class="container" style="padding-top: 2rem; padding-bottom: 8rem;">
+        <div class="form-row justify-content-center">
+            <div class="col-sm-10">
+                <div class="form-row">
+                    <div class="col-md-8" style="padding-top: 15px;">
+                        <h4 class="card-title">Visualizar requerimento nº 1</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Requerimentos &gt; Visualizar requerimento nº 1</h6>
+                    </div>
+                    <div class="col-md-4" style="text-align: right; padding-top: 15px;">
+                        <a class="btn my-2" href="javascript:window.history.back();" style="cursor: pointer;"><img class="icon-licenciamento btn-voltar" src="./SGA_files/back-svgrepo-com.svg" alt="Voltar" title="Voltar"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                                                <div class="shadow card" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-md-10">
+                                <h5 class="titulo-nav-tab-custom" style="font-size: 24px; color: #4A7836;">Requerimento de
+                                                                            primeira licença
+                                                                    </h5>
+                                <span class="linha"></span>
+                            </div>
+                            <div class="col-md-2">
+                                                                                                            <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1/documentacao"><img class="icon-licenciamento" src="./SGA_files/documents-svgrepo-com.svg" alt="Analisar documentos" title="Analisar documentos"></a>
+                                        <a class="btn" data-toggle="modal" data-target="#documentos-edit"><img class="icon-licenciamento" src="./SGA_files/documents-transference-symbol-svgrepo-com.svg" alt="Editar documentos" title="Editar documentos"></a>
+                                                                                                                <a class="btn" href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1/visitas"><img class="icon-licenciamento" src="./SGA_files/chat-svgrepo-com.svg" alt="Visitas a empresa" title="Visitas a empresa"></a>
+                                                                                                                                                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5 class="titulo-nav-tab-custom">Empresa/Serviço</h5>
+                                <h6 class="titulo-nav-tab-custom" style="color: #4A7836;">Info mundo tecnologia</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow card" style="width: 100%; margin-top: 1rem;">
+                    <div class="card-body">
+                        <div class="accordion" id="accordionExample">
+                            <div class="d-flex align-items-center justify-content-between" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="cursor: pointer;">
+                                <div class="col-md-11">
+                                    <h5>
+                                        <button type="button" class="titulo-nav-tab-custom btn-block text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Informações do Requerente
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div class="col-md-1">
+                                    <a><img src="./SGA_files/dropdown-svgrepo-com.svg" alt="arquivo atual" width="45" class="img-flex"></a>
+                                </div>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="name">Nome</label>
+                                            <input id="name" class="form-control apenas_letras " type="text" name="name" value="Empresario" disabled="" autofocus="" autocomplete="name">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="email">Email</label>
+                                            <input id="email" class="form-control " type="email" name="email" value="empresa@empresa.com" disabled="" autofocus="" autocomplete="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="rg">RG</label>
+                                            <input id="rg" class="form-control " type="text" name="rg" value="38.291.584-7" disabled="" autofocus="" autocomplete="rg">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="orgao_emissor">Orgão emissor</label>
+                                            <input id="orgao_emissor" class="form-control " type="text" name="orgão_emissor" value="SDS-PE" disabled="" autocomplete="orgão_emissor">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="cpf">CPF</label>
+                                            <input id="cpf" class="form-control " type="text" name="cpf" value="872.117.185-87" disabled="" autofocus="" autocomplete="cpf">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="celular">Contato</label>
+                                            <input id="celular" class="form-control celular " type="text" name="celular" value="(82) 99661-7025" disabled="" autocomplete="celular">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="cep">CEP</label>
+                                            <input id="cep" class="form-control cep " type="text" name="cep" value="55292-000" disabled="" autofocus="" autocomplete="cep" onblur="pesquisacep(this.value);">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="bairro">Bairro</label>
+                                            <input id="bairro" class="form-control " type="text" name="bairro" value="Miranda" disabled="" autofocus="" autocomplete="bairro">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="rua">Rua</label>
+                                            <input id="rua" class="form-control " type="text" name="rua" value="Rua dos Estados" disabled="" autocomplete="rua">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="numero">Número</label>
+                                            <input id="numero" class="form-control  " type="text" name="número" value="807" disabled="" autocomplete="número">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="cidade">Cidade</label>
+                                            <input type="hidden" name="cidade" value="Garanhuns">
+                                            <input id="cidade" class="form-control " type="text" value="Garanhuns" required="" disabled="" autofocus="" autocomplete="cidade">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="estado">Estado</label>
+                                            <input type="hidden" name="estado" value="PE">
+                                            <select id="estado" class="form-control " type="text" required="" autocomplete="estado" disabled="">
+                                                <option value="" hidden="">-- Selecione o UF --</option>
+                                                <option selected="" value="PE">Pernambuco</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="complemento">Complemento</label>
+                                            <textarea class="form-control " type="text" name="complemento" id="complemento" cols="30" rows="5" disabled="">Casa</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow card" style="width: 100%; margin-top: 1rem;">
+                    <div class="card-body">
+                        <div class="accordion" id="accordionExample">
+                            <div class="d-flex align-items-center justify-content-between collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="cursor: pointer; ">
+                                <div class="col-md-11">
+                                    <h5>
+                                        <button class="titulo-nav-tab-custom btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Informações da Empresa/Serviço
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div class="col-md-1">
+                                    <a><img src="./SGA_files/dropdown-svgrepo-com.svg" alt="arquivo atual" width="45" class="img-flex"></a>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
+                                <div class="card-body">
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="nome_empresa">Nome</label>
+                                            <input id="nome_empresa" class="form-control apenas_letras " type="text" name="nome_da_empresa" value="Info mundo tecnologia" disabled="" autofocus="" autocomplete="nome_empresa">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                                                                            <label for="cnpj">CNPJ</label>
+                                                <input id="cnpj" class="form-control " type="text" name="cnpj" value="32.970.478/0001-30" disabled="" autocomplete="cnpj">
+                                                                                    </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="celular_da_empresa">Contato</label>
+                                            <input id="celular_da_empresa" class="form-control celular " type="text" name="celular_da_empresa" value="(34) 98192-2518" disabled="" autocomplete="celular">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="setor">Grupo da empresa</label>
+                                            <select id="setor" class="form-control " type="text" name="setor" required="" autofocus="" autocomplete="setor" disabled="">
+                                                <option value="">Indústrias</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="porte">Porte</label>
+                                            <select id="porte" class="form-control " type="text" name="porte" required="" autofocus="" autocomplete="setor" disabled="">
+                                                <option value="">
+                                                                                                                Micro
+                                                                                                            </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="cep_da_empresa">CEP</label>
+                                            <input id="cep_da_empresa" class="form-control cep " type="text" name="cep_da_empresa" value="55292-000" disabled="" autofocus="" autocomplete="cep_da_empresa" onblur="pesquisacepEmpresa(this.value);">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="bairro_da_empresa">Bairro</label>
+                                            <input id="bairro_da_empresa" class="form-control " type="text" name="bairro_da_empresa" value="Jardim Monte Líbano" disabled="" autofocus="" autocomplete="bairro_da_empresa">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="rua_da_empresa">Rua</label>
+                                            <input id="rua_da_empresa" class="form-control " type="text" name="rua_da_empresa" value="Rua do Cateté" disabled="" autocomplete="rua_da_empresa">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="numero_da_empresa">Número</label>
+                                            <input id="numero_da_empresa" class="form-control " type="text" name="número_da_empresa" value="588" disabled="" autocomplete="número_da_empresa">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="cidade_da_empresa">Cidade</label>
+                                            <input type="hidden" name="cidade_da_empresa" value="Garanhuns">
+                                            <input id="cidade_da_empresa" class="form-control " type="text" value="Garanhuns" required="" disabled="" autofocus="" autocomplete="cidade_da_empresa">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="estado_da_empresa">Estado</label>
+                                            <input type="hidden" name="estado_da_empresa" value="PE">
+                                            <select id="estado_da_empresa" class="form-control " type="text" required="" autocomplete="estado_da_empresa" disabled="">
+                                                <option value="" hidden="">-- Selecione o UF --</option>
+                                                <option selected="" value="PE">Pernambuco</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-12 form-group">
+                                            <label for="complemento_da_empresa">Complemento</label>
+                                            <textarea class="form-control " type="text" name="complemento_da_empresa" id="complemento_da_empresa" cols="30" rows="5" disabled="">Casa</textarea>
+                                        </div>
+                                    </div>
+                                                                    </div>
+                            </div>
+
+                        
+
+                        </div>
+                    </div>
+                </div>
+
+                                                            <div class="shadow card" style="width: 50%; margin-top: 1rem;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <h5 class="titulo-nav-tab-custom" style="color: #4A7836;">Atribuir analista</h5>
+                                            <span class="linha"></span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a data-toggle="modal" data-target="#atribuir-analista" style="cursor: pointer;"><img width="25" src="./SGA_files/plus-svgrepo-com.svg" alt="Atribuir analista" title="Atribuir analista"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mt-4">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a><img src="./SGA_files/profile-user-svgrepo-com.svg" alt="usuario" width="45" class="img-flex"></a>
+                                        </div>
+                                        <div class="col-md-10" style="padding-left: 30px;">
+                                            <h6 class="titulo-nav-tab-custom">Analista1
+</h6>
+                                            <h6 class="titulo-nav-tab-custom">Tipo de analista: <span style="color: #4A7836;"> Processo  </span> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                </div>
+        </div>
+    </div>
+            <!-- Modal documentos -->
+        <div class="modal fade" id="documentos-edit" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #28a745;">
+                        <h5 class="modal-title" id="staticBackdropLabel" style="color: white;">Editar checklist de documentos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="documentos-form-edit" method="POST" action="http://localhost/sistema-gestao-ambiental/public/requerimentos/update-checklist">
+                            <input type="hidden" name="_token" value="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="requerimento" value="1">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <label for="licenca">Selecione a licença que a empresa terá que emitir<span style="color: red; font-weight: bold;">*</span></label>
+                                    <select name="licença" id="licença" class="form-control " onchange="defaultDocs(this)">
+                                        <option value="4">Simplificada</option>
+                                        <option selected="" value="1">Prévia</option>
+                                        <option value="2">Instalação</option>
+                                        <option value="3">Operação</option>
+                                        <option value="6">Regularização</option>
+                                        <option value="5">Autorização</option>
+                                    </select>
+
+                                                                    </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label for="opcão_taxa_serviço_edit">Taxa de serviço de emissão de licença<span style="color: red; font-weight: bold;">*</span></label>
+                                    <select name="opcão_taxa_serviço" id="opcão_taxa_serviço_edit" class="form-control " required="" onchange="mostrarInputEdit(this)">
+                                        <option selected="" disabled="" value="">-- Selecione uma opção --</option>
+                                        <option value="Definir de forma manual">Definir de forma manual</option>
+                                        <option selected="" value="Definir de forma automática">Definir de forma automática</option>
+                                        <option value="Definir de forma automática com juros">Definir de forma automática com juros</option>
+                                    </select>
+
+                                                                    </div>
+
+                                <div id="div_taxa_servico_manual_edit" class="col-md-6 form-group" style="  display: none;  ">
+                                    <label for="valor_da_taxa_de_serviço_edit">Valor da taxa de serviço</label>
+                                    <input type="number" step="0.01" id="valor_da_taxa_de_serviço_edit" name="valor_da_taxa_de_serviço" class="form-control" placeholder="Digite o valor a ser cobrado" value="75">
+
+                                                                    </div>
+
+                                <div id="div_taxa_servico_juros_edit" class="col-md-6 form-group" style="  display: none;   ">
+                                    <label for="valor_do_juros_edit">Valor do juros cobrado em porcentagem</label>
+                                    <input type="number" id="valor_do_juros_edit" name="valor_do_juros" class="form-control" placeholder="Digite a porcentagem cobrada a mais" value="">
+
+                                                                    </div>
+                            </div>
+                                                            <div class="form-check ">
+                                    <input id="documento-18" class="form-check-input" type="checkbox" name="documentos[]" value="18">
+                                    <label for="documento-18" class="form-check-label">Atestado de Regularidade do Corpo deBombeiro (Xerox)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-4" class="form-check-input" type="checkbox" name="documentos[]" value="4">
+                                    <label for="documento-4" class="form-check-label">Autorização da supressão de vegetação, solicitada ao órgão ambiental competente(se houver)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-20" class="form-check-input" type="checkbox" name="documentos[]" value="20">
+                                    <label for="documento-20" class="form-check-label">Cadastro Nacional de Pessoa Jurídica (CNPJ), se houver</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-23" class="form-check-input" type="checkbox" name="documentos[]" value="23">
+                                    <label for="documento-23" class="form-check-label">Certificado da Condição de Microempreendedor individual (Quando couber)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-8" class="form-check-input" type="checkbox" name="documentos[]" value="8" checked="">
+                                    <label for="documento-8" class="form-check-label">Comprovante de fornecimento de água (Compesa), se outro tipo, apresentar recibo de pagamento</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-3" class="form-check-input" type="checkbox" name="documentos[]" value="3" checked="">
+                                    <label for="documento-3" class="form-check-label">Comprovante de pagamento da taxa ambiental</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-14" class="form-check-input" type="checkbox" name="documentos[]" value="14">
+                                    <label for="documento-14" class="form-check-label">Contrato Social, registrada na Junta Comercial do Estado –JUCEPE</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-1" class="form-check-input" type="checkbox" name="documentos[]" value="1" checked="">
+                                    <label for="documento-1" class="form-check-label">Cópia da (s) Identidade (s) e CPF(s) do requerente</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-11" class="form-check-input" type="checkbox" name="documentos[]" value="11">
+                                    <label for="documento-11" class="form-check-label">Cópia da Carteira de Identidade profissional do (s) responsável (eis) técnico (s)pela execução da obra de instalação</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-5" class="form-check-input" type="checkbox" name="documentos[]" value="5">
+                                    <label for="documento-5" class="form-check-label">Cópia da escritura do terreno (se imóvel próprio) ou Contrato de aluguel</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-10" class="form-check-input" type="checkbox" name="documentos[]" value="10">
+                                    <label for="documento-10" class="form-check-label">Cronograma de execução da obra</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-9" class="form-check-input" type="checkbox" name="documentos[]" value="9">
+                                    <label for="documento-9" class="form-check-label">Dispensa de Outorga de água (se houver)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-19" class="form-check-input" type="checkbox" name="documentos[]" value="19">
+                                    <label for="documento-19" class="form-check-label">Licença de funcionamento da Vigilância Sanitária (Xerox)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-7" class="form-check-input" type="checkbox" name="documentos[]" value="7">
+                                    <label for="documento-7" class="form-check-label">Mapa ou Croquide localização do empreendimento em relação ao Município, respeitando a posição do Norte 
+                verdadeiro, indicando: Vias de acessos principais e pontos de referências para chegar ao local, Ocupações vizinhas ao empreendimento, em um raio mínimo de 100 metros.</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-6" class="form-check-input" type="checkbox" name="documentos[]" value="6">
+                                    <label for="documento-6" class="form-check-label">No caso de utilização de água de corpos hídricos (superficiais ou subterrâneos), 
+                anexar a Outorga da Agência Pernambucana de Águas (APAC)ou de Direito da Agência Estadual de Meio Ambiente (CPRH)</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-16" class="form-check-input" type="checkbox" name="documentos[]" value="16">
+                                    <label for="documento-16" class="form-check-label">Plano  de  Gerenciamento  de  Resíduos  Sólidos  (se  houver),  com  Anotação  de  Responsabilidade Técnica –ART 
+                (quitada)do  responsável  pela  elaboração  de  projeto,  em  conformidade  com  as atribuições do profissional</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-2" class="form-check-input" type="checkbox" name="documentos[]" value="2">
+                                    <label for="documento-2" class="form-check-label">Procuração (se houver), assim como Identidade e CPF do procurador</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-15" class="form-check-input" type="checkbox" name="documentos[]" value="15">
+                                    <label for="documento-15" class="form-check-label">Projeto  de  Controle  Ambiental  (PCA),  detalhando,  dimensionamento  e  tratamento  ambiental  dos 
+                resíduos gerados (sólido, líquido e gasoso), de acordo a exigência na LP, quando for o caso</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-21" class="form-check-input" type="checkbox" name="documentos[]" value="21">
+                                    <label for="documento-21" class="form-check-label">Projeto  Hidrossanitário  com memoria  de  Cálculo  mais anotação  de  Responsabilidade  Técnica (ART) quitada 
+                do profissional responsávelpela elaboração e execução do projeto técnico</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-13" class="form-check-input" type="checkbox" name="documentos[]" value="13">
+                                    <label for="documento-13" class="form-check-label">Projeto arquitetônico com memorial descritivo</label>
+                                </div>
+                                                            <div class="form-check  mt-3 ">
+                                    <input id="documento-12" class="form-check-input" type="checkbox" name="documentos[]" value="12">
+                                    <label for="documento-12" class="form-check-label">Projeto Hidrossanitário com Anotação de Responsabilidade Técnica (ART) e comprovante de pagamento da ART. 
+                O profissional deverá ser habilitado para elaboração e execução do projeto técnico</label>
+                                </div>
+                                                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success submeterFormBotao" form="documentos-form-edit">Atualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+            <div class="modal fade" id="criar-novo-boleto" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #4a7836;">
+                        <h5 class="modal-title" id="staticBackdropLabel" style="color: white;">Confirmar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-criar-novo-boleto" action="http://localhost/sistema-gestao-ambiental/public/requerimentos/criar-novo-boleto" method="post">
+                            <input type="hidden" name="_token" value="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">                            <input type="hidden" name="requerimento" value="1">
+                            Tem certeza que deseja criar um novo boleto para o requerimento?
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success submeterFormBotao" form="form-criar-novo-boleto">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal atribuicao analista -->
+    <div class="modal fade" id="atribuir-analista" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #4a7836;">
+                    <h5 class="modal-title" id="staticBackdropLabel" style="color: white;">Atribuir analista</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="atribuir-analista-form" method="POST" action="http://localhost/sistema-gestao-ambiental/public/requerimentos/atribuir-analista">
+                        <input type="hidden" name="_token" value="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">                        <div class="form-row">
+                            <div class="col-md-12">
+                                <input type="hidden" name="requerimento" value="1">
+                                <label for="analista">Selecione um analista<span style="color: red; font-weight: bold;">*</span></label>
+                                <select name="analista" id="analista" class="form-control " required="">
+                                    <option value="">-- Selecione um analista --</option>
+                                                                            <option value="7">Kelwin Jonas Silva Santos</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success submeterFormBotao" form="atribuir-analista-form">Atribuir ao analista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="atribuir_potencial_poluidor" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Atribuir potencial poluidor ao requerimento</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="atribuir-potencial-poluidor-form" method="POST" action="http://localhost/sistema-gestao-ambiental/public/requerimentos/1/atribuir-potencial-poluidor">
+                    <input type="hidden" name="_token" value="rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e">                    <input type="hidden" name="licença" value="1">
+                    <input type="hidden" name="opcão_taxa_serviço" value="Definir de forma automática">
+                    <input type="hidden" name="valor_da_taxa_de_serviço" value="75">
+                    <input type="hidden" name="valor_do_juros" value="">
+                    <div class="col-md-12 form-group">
+                        <label for="potencial_poluidor">Potencial poluidor<span style="color: red; font-weight: bold;">*</span></label>
+                        <select name="potencial_poluidor" id="potencial_poluidor" class="form-control " required="">
+                            <option value="">-- Selecione o potencial poluidor --</option>
+                                                            <option value="baixo">Baixo</option>
+                                <option value="medio">Médio</option>
+                                <option value="alto">Alto</option>
+                                                    </select>
+                                            </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="submit" id="submeterFormBotao" class="btn btn-primary" form="atribuir-potencial-poluidor-form">Salvar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function defaultDocs(select) {
+            $.ajax({
+                url:"http://localhost/sistema-gestao-ambiental/public/documentos-padrao/licenca",
+                type:"get",
+                data: {"licenca_enum": select.value},
+                dataType:'json',
+                success: function(data) {
+                    var documento = null;
+                    if(data.length > 0){
+                        for(var i = 0; i < data.length; i++){
+                            documento = document.getElementById('documento-'+data[i].id);
+                            console.log(documento);
+                            if (data[i].padrao) {
+                                documento.checked = true;
+                            } else if (data[i].padrao == null) {
+                                documento.checked = false;
+                            } else {
+                                documento.checked = false;
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function mostrarInput(select) {
+            var div_taxa_servico = document.getElementById('div_taxa_servico_manual');
+            var div_taxa_juros = document.getElementById('div_taxa_servico_juros');
+
+            switch (select.value) {
+                case "Definir de forma manual":
+                    div_taxa_servico.style.display = "block";
+                    div_taxa_juros.style.display = "none";
+                    break;
+                case "Definir de forma automática":
+                    div_taxa_servico.style.display = "none";
+                    div_taxa_juros.style.display = "none";
+                    break;
+                case "Definir de forma automática com juros":
+                    div_taxa_servico.style.display = "none";
+                    div_taxa_juros.style.display = "block";
+                    break;
+            }
+        }
+
+        function mostrarInputEdit(select) {
+            var div_taxa_servico = document.getElementById('div_taxa_servico_manual_edit');
+            var div_taxa_juros = document.getElementById('div_taxa_servico_juros_edit');
+
+            switch (select.value) {
+                case "Definir de forma manual":
+                    div_taxa_servico.style.display = "block";
+                    div_taxa_juros.style.display = "none";
+                    break;
+                case "Definir de forma automática":
+                    div_taxa_servico.style.display = "none";
+                    div_taxa_juros.style.display = "none";
+                    break;
+                case "Definir de forma automática com juros":
+                    div_taxa_servico.style.display = "none";
+                    div_taxa_juros.style.display = "block";
+                    break;
+            }
+        }
+    </script>
+            </div>
+    </div>
+</div>
+
+<script>
+    function toggleSideBar(){
+        if($('#logoSGA').is(":hidden")){
+            $('#logoSGA').show();
+            $('#sidebarCollapse').hide();
+            $('#sidebarCollapseClose').show();
+            $('#logoImage').hide();
+        }else{
+            $('#logoSGA').hide();
+            $('#sidebarCollapse').show();
+            $('#sidebarCollapseClose').hide();
+            if($('#logoImage').is(":hidden")){
+                $('#logoImage').show();
+            }
+        }
+        $('#sidebar').toggleClass('active');
+    }
+</script>
+
+            <!-- Page Heading -->
+            
+            <!-- Page Content -->
+            <main>
+                
+            </main>
+        </div>
+
+        
+        <!-- Livewire Scripts -->
+
+<script src="./SGA_files/livewire.js.download" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'rkqjOSfpVhpwXcD4m2ZUaTWnzQpG4rvKKGYhFL6e';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+        <footer>
+    <div id="appRodape">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="margin-top: 40px;">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-6">
+                            <a href="https://garanhuns.pe.gov.br/" target="_blank" style="text-align: center">
+                                <img class="img" src="./SGA_files/prefeitura-garanhuns.png" alt="Prefeitura de Garanhuns" width="120px;" style="max-width: 120px; max-height: 120px; display:inline;">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img" src="./SGA_files/gus-logotipo.png" alt="Prefeitura de Garanhuns" width="120px;" style="max-width: 120px; max-height: 120px; display:inline;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="margin-top: 40px;">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-12">
+                            <a href="http://localhost/sistema-gestao-ambiental/public/requerimentos/1#">
+                                <img class="img" src="./SGA_files/logo.svg" alt="Sistema de gestão ambiental" style="width: 240px; height: auto; display:inline;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-12">
+                            <label>Desenvolvido por:</label>
+                        </div>
+                        <div class="col-md-6" style="padding-top: 10px; border-right: 1px #000000 solid;"> 
+                            <a href="http://ufape.edu.br/" target="_blank">
+                                <img class="img" src="./SGA_files/ufape.png" alt="Logo da UFAPE" style="display:inline;">
+                            </a>
+                        </div>
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <a href="http://lmts.ufape.edu.br/" target="_blank">
+                                <img class="img" src="./SGA_files/lmts.png" alt="Logo do LMTS" style="display:inline;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-12">
+                            <label>Redes sociais do LMTS:</label>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="https://instagram.com/lmts_ufape?utm_medium=copy_link" target="_blank"><img class="img" src="./SGA_files/Icon awesome-instagram.png" alt="Instagram do LMTS" style="height: 80%; display:inline;"></a>
+                            <a href="https://www.facebook.com/LMTSUFAPE" target="_blank"><img class="img" src="./SGA_files/Icon awesome-facebook.png" alt="Facebook do LMTS" style="height: 80%; display:inline;"></a>
+                        </div>
+                        <div class="col-md-12">
+                            <a class="link-email" href="mailto:lmts@ufape.edu.br">lmts@ufape.edu.br</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script>
+            $(document).ready(function () {
+                var btn = document.getElementsByClassName("submeterFormBotao");
+                if(btn.length > 0){
+                    $(document).on('submit', 'form', function() {
+                        $('button').attr('disabled', 'disabled');
+                        for (var i = 0; i < btn.length; i++) {
+                        btn[i].textContent = 'Aguarde...';
+                        btn[i].style.backgroundColor = btn[i].style.backgroundColor + 'd8';
+                    }
+                    });
+                }
+            })
+        </script>
+    
+
+</body><evlist></evlist></html>

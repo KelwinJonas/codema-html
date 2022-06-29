@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>CODEMA</title>
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./codemaInterno_files/css2">
+
+        <!-- Styles -->
+
+        <link rel="stylesheet" href="./codemaInterno_files/app.css">
+
+
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+        <link rel="stylesheet" href="./codemaInterno_files/bootstrap.min.css">
+        <link rel="stylesheet" href="./codemaInterno_files/style.css">
+        <link href="./docs/5.0/sidebars.css" rel="stylesheet">
+
+        <!-- Scripts -->
+        <script async="" src="./codemaInterno_files/analytics.js.download"></script><script src="./codemaInterno_files/app.js.download" defer=""></script>
+        <script src="./codemaInterno_files/bootstrap.js.download"></script><meta name="betech_apesar" content="UA-23288050-15"><meta name="betech_fatiei" content="UA-23288050-14">
+        <script src="./codemaInterno_files/jquery-3.6.min.js.download"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="./SGA_files/bootstrap.min.js.download" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="chrome-extension://ejhkmnhjkbekmfohoipicmpmjdbofdhm/enfado.js?host=paguemenos.betechers.com.br"></script><script type="text/javascript" src="chrome-extension://ejhkmnhjkbekmfohoipicmpmjdbofdhm/external/sizzle.min.js"></script></head>
+    <body style="background-color: #F0F0F0;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-color" style="padding-top: 35px; padding-bottom: 35px;">
+            <div class="container" style="margin-left: 26px;">
+                <a class="navbar-brand nav-link-logo" href="http://127.0.0.1:8000/">
+                    <img class="img-logo" src="./codemaInterno_files/logo codema branca transparente 1.svg" alt="Logo codema" style="height: 100px; width: 300px;">
+                </a>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light nav-secondary-color">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/produtos" style="font-size: 14px;">O CODEMA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/#" style="font-size: 14px;">CONTROLE SOCIAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/#" style="font-size: 14px;">REUNIÕES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/login" style="font-size: 14px;">TRANSPARÊNCIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/register" style="font-size: 14px;">LEGISLAÇÕES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/register" style="font-size: 14px;">AÇÕES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/register" style="font-size: 14px;">PUBLICAÇÕES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/register" style="font-size: 14px;">CONTATO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://www.facebook.com/ufape.comunica">
+                                <img  src="./codemaInicial_files/Icon awesome-facebook.svg" alt="Logo facebook" style="width: 30px;">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://instagram.com/ufape.oficial?utm_medium=copy_link">
+                                <img src="./codemaInicial_files/Icon awesome-instagram.svg" alt="Logo instagram" style="width: 30px;">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="mailto:comunicacao.ufape@ufrpe.br">
+                                <img src="./codemaInicial_files/contato.png" alt="Logo email" style="width: 30px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row px-2 mt-4 justify-content-between">
+                <div class="col-md-3">
+                    <div class="row">
+                      <p style="font-size: 18px; color: #85C226;">SOBRE O CONSELHO E TRANSPARÊNCIA</p>
+                    </div>
+                    <ul class="list-unstyled ps-0">
+                      <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed p-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                          Sobre o conselho
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Equipe</a></li>
+                            <li><a href="#" class="link-dark rounded">Locais de Atendimento</a></li>
+                            <li><a href="#" class="link-dark rounded">O que é o CODEMA</a></li>
+                            <li><a href="#" class="link-dark rounded">Serviços</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed p-0" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+                          Transparência
+                        </button>
+                        <div class="collapse show" id="dashboard-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Acesso à informação</a></li>
+                            <li><a href="#" class="link-dark rounded">Dados abertos</a></li>
+                            <li><a href="#" class="link-dark rounded">Legislação</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <p class="mb-0" style="font-size: 26px; font-weight: 600;">Locais de Atendimento</p>
+                        <p class="mt-0" style="font-size: 14px;">Página Inicial > Sobre > <span style="color: #85C226;">Locais de Atendimento</span></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow mt-2 border-none" style="border-radius: 10px;">
+                                <div class="card-body p-2">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="arrow-collapse flex align-items-center justify-content-between"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="cursor: pointer; ">
+                                            <div class="col-md-11">
+                                                <button class="btn-block text-left" style="padding: 5px;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <div class="row">
+                                                        <p style="font-weight: 600; font-size: 16px;">
+                                                            Endereço 1
+                                                            <br>
+                                                            <span style="font-weight: normal;">
+                                                                Av. Caruaru, B. Heliópolis, n. 123
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="font-size: 14px;">
+                                                            Horário de Atendimento - Segunda a sexta das 09:00 às 17:00
+                                                        </p>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a"><img src="./codemaInterno_files/circle-arrow-down.svg" alt="arquivo atual"  width="50" class="img-flex"></a>
+                                            </div>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="form-row">
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="porte">Porte</label>
+                                                        <select id="porte" type="text" name="porte" required autofocus autocomplete="setor" disabled>
+                                                            <option value="">
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="complemento_da_empresa">Complemento</label>
+                                                        <textarea class="form-control" type="text" name="complemento_da_empresa" id="complemento_da_empresa" cols="30" rows="5" disabled></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow mt-2 border-none" style="border-radius: 10px;">
+                                <div class="card-body p-2">
+                                    <div class="accordion" id="accordionExampleThree">
+                                        <div class="arrow-collapse flex align-items-center justify-content-between"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="cursor: pointer; ">
+                                            <div class="col-md-11">
+                                                <button class="btn-block text-left" style="padding: 5px;" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <div class="row">
+                                                        <p style="font-weight: 600; font-size: 16px;">
+                                                            Endereço 2
+                                                            <br>
+                                                            <span style="font-weight: normal;">
+                                                                Av. Caruaru, B. Heliópolis, n. 123
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="font-size: 14px;">
+                                                            Horário de Atendimento - Segunda a sexta das 09:00 às 17:00
+                                                        </p>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a"><img src="./codemaInterno_files/circle-arrow-down.svg" alt="arquivo atual"  width="50" class="img-flex"></a>
+                                            </div>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExampleThree">
+                                            <div class="card-body">
+                                                <div class="form-row">
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="porte">Porte</label>
+                                                        <select id="porte" type="text" name="porte" required autofocus autocomplete="setor" disabled>
+                                                            <option value="">
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="complemento_da_empresa">Complemento</label>
+                                                        <textarea class="form-control" type="text" name="complemento_da_empresa" id="complemento_da_empresa" cols="30" rows="5" disabled></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    <footer>
+        <div class="container-fluid">
+            <div class="row" style="margin-left: 30px;">
+                <div class="col-md-6" style="color: white;">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-md-4">
+                            <h4>
+                            Saiba mais 
+                            </h4>
+                            <div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Serviços</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Sobre o CODEMA</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Equipe</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Locais de atendimento</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>
+                            Transparência
+                            </h4>
+                            <div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Legislação</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Diário oficial</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Lei de acesso à informação</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Dados abertos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>
+                            Navegação
+                            </h4>
+                            <div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Mapa do site</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Ouvidoria</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a style="text-decoration: none; color: rgb(211, 211, 211)" href="http://127.0.0.1:8000/#">Institucional</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="color: white; padding-left: 100px;">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-md-10" style="border-right: 4px rgb(255, 255, 255) solid; padding-left: 15px; text-align: right;">
+                            <div>
+                                <div class="col-md-12">
+                                    <a target="_blank" href="https://instagram.com/ufape.oficial?utm_medium=copy_link">
+                                        <img id="logo-instagram" src="./codemaInicial_files/logo-codema-footer.png" alt="Logo instagram">
+                                    </a>
+                                </div>
+                                <div class="col-md-12" style="color: rgb(211, 211, 211)">
+                                    <div>
+                                        Endereço: Av. Caruaru, n. 123, B. Heliópolis | 12345-567
+                                    </div>
+                                    <div>
+                                        CNPJ: 12.345.678/0001- 23
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>
+                                <div class="col-md-12">
+                                    <a target="_blank" href="https://www.facebook.com/ufape.comunica">
+                                        <img id="logo-facebook" src="./codemaInicial_files/Icon awesome-facebook.svg" alt="Logo facebook">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <a target="_blank" href="https://instagram.com/ufape.oficial?utm_medium=copy_link">
+                                        <img id="logo-instagram" src="./codemaInicial_files/Icon awesome-instagram.svg" alt="Logo instagram">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <a target="_blank" href="mailto:comunicacao.ufape@ufrpe.br">
+                                        <img id="logo-email" src="./codemaInicial_files/contato.png" alt="Logo email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script>
+            $(document).ready(function() {
+                $('.arrow-collapse').click(function() {
+                    var img = this.children[1].children[0].children[0];
+                    if(this.ariaExpanded == "false") {
+                        img.src = "./codemaInterno_files/circle-arrow-up.svg";
+                    } else if (this.ariaExpanded == "true") {
+                        img.src = "./codemaInterno_files/circle-arrow-down.svg";
+                    }
+                });
+            });
+        </script>
+    
+
+</body><evlist></evlist></html>
